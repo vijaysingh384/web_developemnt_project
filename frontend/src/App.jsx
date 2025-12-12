@@ -7,7 +7,7 @@ import AdminPanel from './pages/AdminPanel'
 import ProviderDashboard from './pages/ProviderDashboard'
 import EnergyReports from './pages/EnergyReports'
 import Services from './pages/Services'
-
+import Contact from './pages/Contact'
 function App() {
   return (
     <Router>
@@ -21,7 +21,7 @@ function App() {
         <Route path="/provider" element={<ProviderDashboard />} />
         <Route path="/reports" element={<EnergyReports />} />
         <Route path="/services" element={<Services />} />
-        
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   )

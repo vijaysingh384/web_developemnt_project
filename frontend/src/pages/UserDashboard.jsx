@@ -45,7 +45,7 @@ function UserDashboard() {
               <Link to="/services" className="text-gray-700 hover:text-green-600">
                 Services
               </Link>
-              <span className="text-gray-700">John Doe</span>
+              <span className="text-gray-700">Mukesh</span>
               <Link to="/" className="text-gray-700 hover:text-green-600">
                 Logout
               </Link>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import Footer from './Footer'
 
 function ProviderDashboard() {
   const [recommendations, setRecommendations] = useState([
@@ -44,31 +45,55 @@ function ProviderDashboard() {
         </div>
       </nav>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Provider Dashboard</h2>
+      <div className="relative w-full">
 
-        {/* Stats */}
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <p className="text-gray-600 text-sm mb-2">Total Recommendations</p>
-            <p className="text-3xl font-bold text-gray-900">{recommendations.length}</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <p className="text-gray-600 text-sm mb-2">Pending</p>
-            <p className="text-3xl font-bold text-yellow-600">
-              {recommendations.filter(r => r.status === 'Pending').length}
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <p className="text-gray-600 text-sm mb-2">Sent</p>
-            <p className="text-3xl font-bold text-green-600">
-              {recommendations.filter(r => r.status === 'Sent').length}
-            </p>
-          </div>
-        </div>
+{/* Background Image */}
+<div
+  className="absolute inset-0 bg-cover bg-center blur-sm opacity-90"
+  style={{
+    backgroundImage:
+      "url('https://images.unsplash.com/photo-1588011930968-eadac80e6a5a?w=900&auto=format&fit=crop&q=60')",
+  }}
+></div>
+
+{/* Content */}
+<div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+  <h2 className="text-3xl font-bold text-gray-900 mb-8 text-white capitalize text-center ">
+    Provider Dashboard
+  </h2>
+
+  {/* Stats */}
+  <div className="grid md:grid-cols-3 gap-6 mb-8 bg-transparent">
+
+    <div className="bg-white/80 backdrop-blur-md p-6 rounded-lg shadow-md">
+      <p className="text-gray-600 text-sm mb-2">Total Recommendations</p>
+      <p className="text-3xl font-bold text-gray-900">
+        {recommendations.length}
+      </p>
+    </div>
+
+    <div className="bg-white/80 backdrop-blur-md p-6 rounded-lg shadow-md">
+      <p className="text-gray-600 text-sm mb-2">Pending</p>
+      <p className="text-3xl font-bold text-yellow-600">
+        {recommendations.filter(r => r.status === "Pending").length}
+      </p>
+    </div>
+
+    <div className="bg-white/80 backdrop-blur-md p-6 rounded-lg shadow-md">
+      <p className="text-gray-600 text-sm mb-2">Sent</p>
+      <p className="text-3xl font-bold text-green-600">
+        {recommendations.filter(r => r.status === "Sent").length}
+      </p>
+    </div>
+
+  </div>
+</div>
+</div>
+
 
         {/* Add Recommendation */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+        <div className="bg-white mt-10 rounded-lg max-w-7xl mx-auto shadow-md p-6 mb-8">
           <h3 className="text-xl font-semibold mb-4">Add New Recommendation</h3>
           <div className="space-y-4">
             <div>
@@ -105,7 +130,7 @@ function ProviderDashboard() {
         </div>
 
         {/* Recommendations List */}
-        <div className="bg-white rounded-lg shadow-md p-6">
+        <div className="bg-white rounded-lg mx-auto max-w-7xl shadow-md p-6">
           <h3 className="text-xl font-semibold mb-4">Your Recommendations</h3>
           <div className="space-y-4">
             {recommendations.map(rec => (
@@ -137,8 +162,10 @@ function ProviderDashboard() {
             ))}
           </div>
         </div>
+        <Footer />
       </div>
-    </div>
+     
+    
   )
 }
 

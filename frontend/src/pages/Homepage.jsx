@@ -59,7 +59,7 @@ function Homepage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-6">
             <Link
-              to="/dashboard"
+              to="/login"
               className="block bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition"
             >
               <p className="text-sm font-semibold text-green-600 mb-2">Houseowners</p>
@@ -71,7 +71,7 @@ function Homepage() {
             </Link>
 
             <Link
-              to="/provider"
+              to="/login"
               className="block bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition"
             >
               <p className="text-sm font-semibold text-blue-600 mb-2">Providers</p>
@@ -83,7 +83,7 @@ function Homepage() {
             </Link>
 
             <Link
-              to="/admin"
+              to="/login"
               className="block bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition"
             >
               <p className="text-sm font-semibold text-orange-500 mb-2">Admins</p>

@@ -10,60 +10,60 @@ function Services() {
       id: 1,
       name: 'Solar Panel Installation',
       provider: 'Green Energy Solutions',
-      location: 'New York, NY',
+      location: 'Gujarat, India',
       sustainability: 'high',
       rating: 4.8,
-      price: '$5,000 - $15,000',
+      price: '5,000 - 15,000',
       description: 'Professional solar panel installation with 25-year warranty'
     },
     {
       id: 2,
       name: 'Smart Thermostat Setup',
       provider: 'EcoTech Services',
-      location: 'Los Angeles, CA',
+      location: 'Mumbai, India',
       sustainability: 'high',
       rating: 4.6,
-      price: '$200 - $500',
+      price: '200 -  500',
       description: 'Install and configure smart thermostats to reduce energy costs'
     },
     {
       id: 3,
       name: 'LED Lighting Upgrade',
       provider: 'Bright Future Energy',
-      location: 'Chicago, IL',
+      location: 'Delhi, India',
       sustainability: 'medium',
       rating: 4.5,
-      price: '$100 - $300',
+      price: '100 - 300',
       description: 'Replace all bulbs with energy-efficient LED lighting'
     },
     {
       id: 4,
       name: 'Energy Audit',
       provider: 'Energy Experts Inc',
-      location: 'New York, NY',
+      location: 'Punjab, India',
       sustainability: 'high',
       rating: 4.9,
-      price: '$150 - $400',
+      price: '150 - 400',
       description: 'Comprehensive home energy audit with detailed recommendations'
     },
     {
       id: 5,
       name: 'HVAC System Upgrade',
       provider: 'Climate Control Pro',
-      location: 'Miami, FL',
+      location: 'Rajasthan, India',
       sustainability: 'medium',
       rating: 4.7,
-      price: '$3,000 - $8,000',
+      price: '3,000 - 8,000',
       description: 'Upgrade to energy-efficient heating and cooling systems'
     },
     {
       id: 6,
       name: 'Insulation Improvement',
       provider: 'Home Efficiency Plus',
-      location: 'Seattle, WA',
+      location: 'Kerala, India',
       sustainability: 'high',
       rating: 4.4,
-      price: '$1,000 - $3,000',
+      price: '1,000 - 3,000',
       description: 'Improve home insulation to reduce heating and cooling costs'
     }
   ]
