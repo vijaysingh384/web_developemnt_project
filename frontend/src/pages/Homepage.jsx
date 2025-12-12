@@ -11,7 +11,11 @@ function Homepage() {
     'every provider',
     'a sustainable future'
   ]
+  const missionText =
+    'Energy Tracker is on a mission to reduce global carbon emissions by empowering people and utilities with the knowledge and solutions required to shape a brighter, cleaner future. We deliver real-time intelligence directly through next-generation smart meters and monitoring systems to offer high-resolution insights that improve energy management.'
+
   const [headlineIndex, setHeadlineIndex] = useState(0)
+  const [typedMission, setTypedMission] = useState('')
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -19,6 +23,20 @@ function Homepage() {
     }, 2200)
     return () => clearInterval(id)
   }, [heroMessages.length])
+
+  useEffect(() => {
+    let index = 0
+    const total = missionText.length
+    const id = setInterval(() => {
+      setTypedMission(missionText.slice(0, index))
+      index = index + 1
+      if (index > total) {
+        index = 0 // restart the typing loop
+      }
+    }, 60)
+
+    return () => clearInterval(id)
+  }, [missionText])
 
   return (
     <div className="min-h-screen bg-white">
@@ -33,7 +51,7 @@ function Homepage() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover blur-[2px]"
         >
           <source src="https://cdn.pixabay.com/video/2022/10/31/137210-766502986_tiny.mp4" type="video/mp4" />
           <source src="https://cdn.pixabay.com/video/2023/05/28/164870-831362503_tiny.mp4" type="video/mp4" />
@@ -117,13 +135,13 @@ function Homepage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold font-serif text-gray-900 mb-6">
               Changing how we use energy starts with data.
             </h2>
           </div>
           <div>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Energy Tracker is on a mission to reduce global carbon emissions by empowering people and utilities with the knowledge and solutions required to shape a brighter, cleaner future. We deliver real-time intelligence directly through next-generation smart meters and monitoring systems to offer high-resolution insights that improve energy management.
+              {typedMission || missionText}
             </p>
           </div>
         </div>
