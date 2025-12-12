@@ -1,11 +1,24 @@
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Footer from './Footer'
 import Navbar from './Navbar'
 import Solution from './Solution'
 
 function Homepage() {
-  
+  const heroMessages = [
+    'homes and the grid',
+    'every home',
+    'every provider',
+    'a sustainable future'
+  ]
+  const [headlineIndex, setHeadlineIndex] = useState(0)
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setHeadlineIndex((prev) => (prev + 1) % heroMessages.length)
+    }, 2200)
+    return () => clearInterval(id)
+  }, [heroMessages.length])
 
   return (
     <div className="min-h-screen bg-white">
@@ -30,8 +43,11 @@ function Homepage() {
         {/* Content */}
         <div className="relative h-full flex items-center justify-center z-10">
           <div className="text-center px-4 max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Energy intelligence for homes and the grid
+            <h1 className="text-4xl md:text-6xl font-bold font-serif text-white mb-6 leading-tight">
+              Energy intelligence for{' '}
+              <span className="inline-block transition-opacity text-blue-500 duration-500 ease-in-out">
+                {heroMessages[headlineIndex]}
+              </span>
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Empowering homeowners and utilities with real-time insights to reduce energy consumption and build a sustainable future.
@@ -39,7 +55,7 @@ function Homepage() {
             <div className="flex gap-4 justify-center">
               <Link 
                 to="/register" 
-                className="px-8 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 text-lg font-semibold transition"
+                className="px-8 py-3  bg-blue-600 text-white rounded-lg hover:text-white-600 text-lg font-semibold transition"
               >
                 Get Started
               </Link>

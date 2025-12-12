@@ -9,7 +9,9 @@ function Navbar() {
                 <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
                   <span className="text-white text-sm font-bold">⚡</span>
                 </div>
+                <Link to="/">
                 <h1 className="text-2xl font-semibold text-gray-900">energy tracker</h1>
+                </Link>
               </div>
             </div>
             <div className="hidden md:flex gap-8 items-center">

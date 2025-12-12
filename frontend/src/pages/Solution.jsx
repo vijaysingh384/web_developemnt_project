@@ -51,7 +51,7 @@ function Solution() {
                     </p>
                     <Link 
                       to="/dashboard"
-                      className="inline-block px-6 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition"
+                      className="inline-block px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-400 transition"
                     >
                       Learn more
                     </Link>
@@ -89,16 +89,22 @@ function Solution() {
               <div className="mb-6">
                 <div className="grid grid-cols-3 gap-4 mb-4">
                   <div className="bg-green-100 rounded-lg p-4 text-center">
-                    <div className="text-2xl mb-2">🏠</div>
+                    <div className="text-2xl mb-2">
+                        <img src="https://images.unsplash.com/vector-1739805925343-a75152047bf3?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG91c2V8ZW58MHx8MHx8fDA%3D" alt="" />
+                    </div>
                     <div className="text-xs text-gray-600">Homes</div>
                   </div>
                   <div className="bg-blue-100 rounded-lg p-4 text-center">
-                    <div className="text-2xl mb-2">☀️</div>
+                    <div className="text-2xl mb-2">
+                        <img src="https://plus.unsplash.com/premium_vector-1719419318644-42b0cd4440af?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c29sYXJ8ZW58MHx8MHx8fDA%3D" alt="" />
+                    </div>
                     <div className="text-xs text-gray-600">Solar</div>
                   </div>
                   <div className="bg-orange-100 rounded-lg p-4 text-center">
-                    <div className="text-2xl mb-2">🔌</div>
-                    <div className="text-xs text-gray-600">EV</div>
+                    <div className="text-2xl mb-2">
+                        <img src="https://plus.unsplash.com/premium_vector-1716429407660-e1c816bc59a0?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZXZ8ZW58MHx8MHx8fDA%3D" alt="" />
+                    </div>
+                    <div className="text-xs text-gray-600"></div>
                   </div>
                 </div>
                 <div className="flex items-center justify-center gap-2 mb-4">
