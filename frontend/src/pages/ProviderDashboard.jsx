@@ -34,7 +34,11 @@ function ProviderDashboard() {
       <nav className="bg-white shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <h1 className="text-2xl font-bold text-green-600">⚡ Energy Tracker - Provider</h1>
+          <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm font-bold ">
+                    <img className='w-full h-full object-cover rounded-full' src="https://plus.unsplash.com/premium_vector-1719412238774-cbc8cef4f71d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZW5lcmd5fGVufDB8fDB8fHww" alt="" />
+                  </span>
+                </div>
             <div className="flex gap-4 items-center">
               <span className="text-gray-700">Energy Solutions Inc</span>
               <Link to="/" className="text-gray-700 hover:text-green-600">

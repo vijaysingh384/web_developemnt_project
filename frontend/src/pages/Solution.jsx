@@ -121,7 +121,7 @@ function Solution() {
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-gray-600">2:00 PM</span>
                     <div className="flex-1 mx-2">
-                      <div className="h-2 bg-green-500 rounded" style={{ width: '75%' }}></div>
+                      <div className="h-2 bg-orange-400 rounded" style={{ width: '75%' }}></div>
                     </div>
                     <span className="text-xs font-semibold">48.4 kWh</span>
                   </div>
